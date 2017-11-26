@@ -1,10 +1,13 @@
+import os
 from flask import Flask
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-  return "Hello, Michael!"
+  return "Hello, World!"
 
 if __name__ == '__main__':
+  for param in os.environ.keys():
+    print("%20s %s" % (param, os.environ[param]))
   app.run(host="0.0.0.0", port=8080, debug=True)
