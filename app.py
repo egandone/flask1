@@ -6,7 +6,6 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-def index():
   out = StringIO()
   out.write('<html><body>')
   out.write('<h1>Hello, World!</h1>\n')
